@@ -17,6 +17,7 @@ use EasyWeChat\OpenPlatform\Application as OpenPlatform;
 use EasyWeChat\OpenWork\Application as OpenWork;
 use EasyWeChat\Payment\Application as Payment;
 use EasyWeChat\Work\Application as Work;
+use EasyWeChat\MicroMerchant\Application as MicroMerchant;
 use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 use Laravel\Lumen\Application as LumenApplication;
@@ -65,6 +66,7 @@ class ServiceProvider extends LaravelServiceProvider
             'payment' => Payment::class,
             'open_platform' => OpenPlatform::class,
             'open_work' => OpenWork::class,
+            'micro_merchant' => MicroMerchant::class,
         ];
 
         foreach ($apps as $name => $class) {

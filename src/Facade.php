@@ -69,4 +69,12 @@ class Facade extends LaravelFacade
     {
         return $name ? app('wechat.open_platform.'.$name) : app('wechat.open_platform');
     }
+
+    /**
+     * @return \EasyWeChat\MicroMerchant\Application
+     */
+    public static function microMerchant($name = '')
+    {
+        return $name ? app('wechat.micro_merchant.'.$name) : app('wechat.micro_merchant');
+    }
 }
